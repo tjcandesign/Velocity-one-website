@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity One - Building the Future of U.S. Aerospace Manufacturing</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">VELOCITY ONE</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#companies">Companies</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo">VELOCITY ONE</span>
+            <span class="close-menu">&times;</span>
+        </div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#companies">Companies</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="container">
+            <h1 class="fade-in">Building the Future of U.S. Aerospace Manufacturing</h1>
+            <p class="subhead fade-in">Velocity One unites and modernizes essential aerospace, defense, and industrial companies.</p>
+            <a href="#about" class="scroll-down">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    Velocity One identifies and transforms strategically vital aerospace manufacturing companies — modernizing operations, empowering leadership, and investing in innovation. Backed by Charlesbank Capital Partners.
+                </p>
+                <div class="video-thumbnail">
+                    <div class="play-button">▶</div>
+                    <p>Watch Our Story</p>
+                </div>
+            </div>
+            <a href="#leadership" class="cta-button">Meet Our Leadership Team</a>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership" id="leadership">
+        <div class="container">
+            <h2 class="section-title">Leadership Team</h2>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/leadership/john-borduin.jpg" alt="John Borduin">
+                    </div>
+                    <h3>John Borduin</h3>
+                    <p class="position">Chief Executive Officer</p>
+                    <div class="bio">
+                        <p>John brings over 20 years of experience in aerospace and defense leadership, with a proven track record of transforming industrial businesses.</p>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/leadership/cory-tellbuescher.jpg" alt="Cory Tellbuescher">
+                    </div>
+                    <h3>Cory Tellbuescher</h3>
+                    <p class="position">Chief Commercial Officer</p>
+                    <div class="bio">
+                        <p>Cory leads business development and customer strategy, with extensive experience in aerospace supply chain and program management.</p>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="images/leadership/christian-tomsich.jpg" alt="Christian Tomsich">
+                    </div>
+                    <h3>Christian Tomsich</h3>
+                    <p class="position">Chief Financial Officer</p>
+                    <div class="bio">
+                        <p>Christian oversees financial strategy and operations, bringing deep expertise in industrial finance and private equity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section class="companies" id="companies">
+        <div class="container">
+            <h2 class="section-title">Our Companies</h2>
+            <div class="companies-grid">
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="images/companies/cad-logo.png" alt="Cartridge Actuated Devices">
+                    </div>
+                    <h3>Cartridge Actuated Devices (CAD)</h3>
+                    <p>Precision-engineered safety and ejection systems.</p>
+                    <button class="learn-more" data-modal="cad-modal">Learn More</button>
+                </div>
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="images/companies/emcore-logo.png" alt="EMCORE Defense Optoelectronics">
+                    </div>
+                    <h3>EMCORE Defense Optoelectronics</h3>
+                    <p>Advanced optical and inertial technologies for defense applications.</p>
+                    <button class="learn-more" data-modal="emcore-modal">Learn More</button>
+                </div>
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="images/companies/aerosphere-logo.png" alt="Aerosphere Power">
+                    </div>
+                    <h3>Aerosphere Power</h3>
+                    <p>Powering aerospace with next-generation energy solutions.</p>
+                    <button class="learn-more" data-modal="aerosphere-modal">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news" id="news">
+        <div class="container">
+            <h2 class="section-title">In the News</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/news/velocity-one-aerosphere.jpg" alt="Velocity One Acquires Aerosphere Power">
+                    </div>
+                    <div class="news-content">
+                        <span class="date">October 15, 2023</span>
+                        <h3>Velocity One Acquires Aerosphere Power</h3>
+                        <p>Expanding its portfolio in aerospace energy solutions, Velocity One announces the acquisition of Aerosphere Power.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/news/emcore-integration.jpg" alt="EMCORE Division Integrates Under Velocity One">
+                    </div>
+                    <div class="news-content">
+                        <span class="date">August 22, 2023</span>
+                        <h3>EMCORE Division Integrates Under Velocity One</h3>
+                        <p>Strategic move strengthens Velocity One's position in defense optoelectronics and inertial navigation systems.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/news/leadership-expansion.jpg" alt="Velocity One Expands Leadership Team">
+                    </div>
+                    <div class="news-content">
+                        <span class="date">June 5, 2023</span>
+                        <h3>Velocity One Expands Leadership Team</h3>
+                        <p>Industry veterans join to drive growth and operational excellence across the Velocity One portfolio.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+            <a href="#" class="view-all">View All Updates →</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer class="contact" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Velocity One</h2>
+                    <p>Modernizing aerospace, defense, and industrial manufacturing through strategic investment and operational excellence.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@velocity-one.com</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Velocity One. All rights reserved.</p>
+                <a href="#" class="back-to-top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Company Modals -->
+    <div id="cad-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img src="images/companies/cad-hero.jpg" alt="Cartridge Actuated Devices">
+                <h2>Cartridge Actuated Devices (CAD)</h2>
+                <p>Cartridge Actuated Devices (CAD) is a leading manufacturer of precision-engineered safety and ejection systems for the aerospace and defense industries. With decades of experience, CAD delivers reliable, high-performance solutions trusted by military and commercial aviation customers worldwide.</p>
+                <p>Our innovative technologies include:</p>
+                <ul>
+                    <li>Ejection seat systems</li>
+                    <li>Emergency escape systems</li>
+                    <li>Rocket motor initiators</li>
+                    <li>Specialty pyrotechnic devices</li>
+                </ul>
+                <a href="#" class="visit-website">Visit Website</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="emcore-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img src="images/companies/emcore-hero.jpg" alt="EMCORE Defense Optoelectronics">
+                <h2>EMCORE Defense Optoelectronics</h2>
+                <p>EMCORE Defense Optoelectronics is a premier provider of advanced optical and inertial technologies for defense and aerospace applications. Our cutting-edge solutions enable precision navigation, targeting, and sensing in the most demanding environments.</p>
+                <p>Key capabilities include:</p>
+                <ul>
+                    <li>Fiber optic gyroscopes (FOGs)</li>
+                    <li>Inertial measurement units (IMUs)</li>
+                    <li>Tactical grade navigation systems</li>
+                    <li>High-reliability optical components</li>
+                </ul>
+                <a href="#" class="visit-website">Visit Website</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="aerosphere-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img src="images/companies/aerosphere-hero.jpg" alt="Aerosphere Power">
+                <h2>Aerosphere Power</h2>
+                <p>Aerosphere Power is at the forefront of next-generation energy solutions for aerospace applications. Our innovative power systems and energy storage technologies are enabling the future of more electric and hybrid-electric aircraft.</p>
+                <p>Our solutions include:</p>
+                <ul>
+                    <li>Advanced battery systems</li>
+                    <li>Hybrid-electric propulsion</li>
+                    <li>Power distribution and management</li>
+                    <li>Energy storage optimization</li>
+                </ul>
+                <a href="#" class="visit-website">Visit Website</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

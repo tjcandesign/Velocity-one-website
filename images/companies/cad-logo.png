@@ -1,0 +1,9 @@
+
+    <svg width="300" height="100" viewBox="0 0 300 100" 
+         xmlns="http://www.w3.org/2000/svg" 
+         style="background-color: #f0f0f0; font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: center;">
+      <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#999" font-size="14">
+        CAD Logo (300×100)
+      </text>
+    </svg>
+  
