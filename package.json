@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tjcandesign/Velocity-one-website#readme",
   "dependencies": {
-    "canvas": "^3.2.0"
+    "canvas": "^3.2.0",
+    "https": "^1.0.0"
   }
 }
