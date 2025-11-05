@@ -1,30 +1,119 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Hero Section Scroll Effects
+    const hero = document.querySelector('.hero');
+    const heroBg = document.querySelector('.hero-bg');
+    const heroText = document.querySelector('.hero-text');
+    const heroHeading = document.querySelector('.hero h1');
+    const heroSubhead = document.querySelector('.hero .subhead');
+    const heroGrid = document.querySelector('.hero::before');
+    
+    function updateHeroScrollEffects() {
+        if (!hero) return;
+        
+        const scrollPosition = window.scrollY;
+        const heroHeight = hero.offsetHeight;
+        const scrollPercent = Math.min(scrollPosition / (heroHeight * 0.5), 1);
+        
+        // Add/remove scrolled class based on scroll position
+        if (scrollPosition > 50) {
+            hero.classList.add('scrolled');
+        } else {
+            hero.classList.remove('scrolled');
+        }
+        
+        // Parallax and fade effects
+        if (heroBg) {
+            const translateY = scrollPosition * 0.4;
+            heroBg.style.transform = `translate3d(0, ${translateY}px, 0) scale(${1 + scrollPercent * 0.1})`;
+        }
+        
+        // Grid overlay fade out
+        if (heroGrid) {
+            const gridOpacity = 0.5 - (scrollPercent * 0.5);
+            hero.style.setProperty('--grid-opacity', Math.max(0, gridOpacity));
+        }
+    }
+    
+    // Initial call
+    updateHeroScrollEffects();
+    
+    // Throttle scroll events for performance
+    let isScrolling;
+    window.addEventListener('scroll', function() {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(updateHeroScrollEffects, 50);
+    }, { passive: true });
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
     const closeMenu = document.querySelector('.close-menu');
     const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
     
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        const isOpening = !mobileMenu.classList.contains('active');
+        
+        if (isOpening) {
             mobileMenu.classList.add('active');
+            overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
-        });
+            
+            // Toggle hamburger to X
+            hamburger.classList.add('active');
+        } else {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // Toggle X back to hamburger
+            hamburger.classList.remove('active');
+        }
     }
     
-    if (closeMenu) {
-        closeMenu.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
+    // Initialize mobile menu
+    if (hamburger && mobileMenu) {
+        // Toggle on hamburger click
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
         });
+        
+        // Close on overlay click
+        overlay.addEventListener('click', function() {
+            toggleMobileMenu();
+        });
+        
+        // Close on close button click
+        if (closeMenu) {
+            closeMenu.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleMobileMenu();
+            });
+        }
+        
+        // Close menu when clicking on links (with a small delay for smooth transition)
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+                setTimeout(toggleMobileMenu, 300);
+            });
+        });
+        
+        // Close menu when window is resized to desktop
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                hamburger.classList.remove('active');
+            }
+        }
+        
+        window.addEventListener('resize', handleResize);
     }
-    
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
     
     // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
